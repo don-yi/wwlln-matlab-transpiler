@@ -9,7 +9,7 @@ grammar Expr;
  * parser rules
  */
 
-prog : (import_stmt NEWLINE)*                                   # Program
+prog : import_stmt NEWLINE                                      # Program
 ;
 import_stmt : IMPORT '"' ds '"' FROM '"' fname '"' AS symbol    # Import
 ;

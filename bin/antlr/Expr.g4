@@ -9,12 +9,10 @@ grammar Expr;
  * parser rules
  */
 
-prog : (import_stmt NEWLINE)*                                   # Program
+prog : import_stmt NEWLINE                                      # Program
 ;
-
 import_stmt : IMPORT '"' ds '"' FROM '"' fname '"' AS symbol    # Import
 ;
-
 ds : ('/' NAME)+                                                # Dataset
 ;
 fname : ('\\' NAME)+ '.' HDF5                                   # Filename
